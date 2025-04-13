@@ -11,3 +11,9 @@ export function formatBreadcrumb(pathname: string) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(' ');
 }
+
+export const camelToTitle = (camelCase: string) => {
+  return camelCase
+    .replace(/([A-Z])/g, ' $1') // Thêm khoảng trắng trước chữ in hoa
+    .replace(/^./, (str) => str.toUpperCase()); // Viết hoa chữ cái đầu tiên
+};
