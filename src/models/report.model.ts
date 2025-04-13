@@ -16,7 +16,7 @@ export const ScoreGroupASchema = z.object({
   id: z.number(),
   math: z.number(),
   physics: z.number(),
-  biology: z.number(),
+  chemistry: z.number(),
   total: z.number(),
 });
 
@@ -24,7 +24,14 @@ export const TopScoresGroupASchema = z.object({
   topScores: z.array(ScoreGroupASchema),
 });
 
+export const DashboardSchema = z.object({
+  totalStudents: z.number(),
+  averageScore: z.number(),
+  excellentStudents: z.number(),
+});
+
 export type SubjectType = z.infer<typeof SubjectSchema>;
 export type StatisticsType = z.infer<typeof StatisticsSchema>;
 export type ScoreGroupAType = z.infer<typeof ScoreGroupASchema>;
 export type TopScoresGroupAType = z.infer<typeof TopScoresGroupASchema>;
+export type DashboardType = z.infer<typeof DashboardSchema>;

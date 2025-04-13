@@ -12,6 +12,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from '@/components/ui/chart';
+import { Skeleton } from '@/components/ui/skeleton';
 import { useGetReportStatistics } from '@/hooks/use-report';
 import { camelToTitle, cn } from '@/lib/utils';
 
@@ -42,7 +43,11 @@ export function StackedBarChart() {
   const isTablet = useMediaQuery('(max-width: 1024px)');
 
   if (isLoading) {
-    return <div className="p-4">Loading...</div>;
+    return (
+      <div className="m-4">
+        <Skeleton className="h-[540px] w-full rounded-xl" />
+      </div>
+    );
   }
 
   if (data && isSuccess) {

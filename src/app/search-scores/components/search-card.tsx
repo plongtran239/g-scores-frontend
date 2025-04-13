@@ -23,7 +23,7 @@ const SearchCard = ({ setRegNum }: { setRegNum: Dispatch<SetStateAction<number |
   return (
     <Card>
       <CardHeader>
-        <CardTitle>User Registration</CardTitle>
+        <CardTitle>Student Registration</CardTitle>
         <CardDescription>Enter registration number for detail scores</CardDescription>
       </CardHeader>
       <CardContent className="grid w-full max-w-sm items-center gap-2">

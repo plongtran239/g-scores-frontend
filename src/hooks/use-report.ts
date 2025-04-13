@@ -14,3 +14,10 @@ export const useGetTopGroupA = () => {
     queryFn: () => reportApi.getTopGroupA(),
   });
 };
+
+export const useGetDashboard = () => {
+  return useQuery({
+    queryKey: ['dashboard'],
+    queryFn: () => reportApi.getDashboard(),
+  });
+};
