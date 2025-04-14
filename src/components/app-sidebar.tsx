@@ -23,7 +23,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
       <SidebarHeader>
-        <h1 className="text-center text-3xl font-bold p-2">G-Scores</h1>
+        <Link href="/dashboard">
+          <h1 className="text-center text-3xl font-bold p-2">
+            G-Scores
+          </h1>
+        </Link>
       </SidebarHeader>
       <SidebarContent>
         {sidebarNavItems.map((item) => (
